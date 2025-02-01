@@ -1,13 +1,4 @@
----
-documentclass: book
-papersize: a4
-fontsize: 10pt
-header-includes: |
-    \hypersetup{
-        colorlinks = true,
-        linkbordercolor = {pink},
-    }
----
+
 
 # Projet de PG203
 
