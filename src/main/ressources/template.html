@@ -1,0 +1,63 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet POO : Forecast méteo</title>
+
+    <!-- feuille de style generale  -->
+    <link href="styles/style.css" type="text/css" rel="stylesheet" />
+   
+
+	<script src="scripts/main.js" defer></script>
+    <!-- scripts et styles pour la map -->
+    <script src="scripts/worldMap.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <script src="scripts/conditionPictures.js" defer> </script>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+</head>
+</head>
+<body>
+    <div class="all">
+        <header>Forecast Méteo</header>
+
+        <div class="infos-map-container">
+            <div class="infos-container">
+                <div class="infos">
+                    <p id='pville'></p>
+                    <p id='pregion'></p>
+                    <p id='ppays'></p>
+                    <p id='jours'>Voir les prévisions pour <input type="number" id="nbjours-selector" min="1" max="7" name='nbjours-selector' value='1'/> jours</p>
+                </div>
+
+            </div>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+        
+        <div class="container2">
+            <div class="onglet-selector-container">
+                <div class="onglet-selector" id="weatherapi-selector"> WeatherApi</div>
+                <div class="onglet-selector" id="openmeteo-selector"> OpenMeteo</div>
+                <div class="onglet-selector" id="openweather-selector"> OpenWeather</div>
+            </div>
+            <div class="onglet-container">
+                <div class='onglet' id='weatherapi'>
+                    
+                </div>
+                <div class='onglet' id='openmeteo'>
+                    
+                </div>
+                <div class='onglet' id='openweather'>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

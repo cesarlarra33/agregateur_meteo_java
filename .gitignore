@@ -1,0 +1,27 @@
+# Build artifacts
+/build/
+/bin/
+/out/
+/target/
+/.gradle/
+/tmp/
+
+# IDE
+/.idea/
+/.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# macOS
+.DS_Store
+
+# Node
+/node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Secrets and runtime data
+.config
+cache.json

@@ -1,0 +1,63 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet POO : Forecast méteo</title>
+
+    <!-- feuille de style generale  -->
+    <link href="styles/style.css" type="text/css" rel="stylesheet" />
+   
+
+	<script src="scripts/main.js" defer></script>
+    <!-- scripts et styles pour la map -->
+    <script src="scripts/worldMap.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <script src="scripts/conditionPictures.js" defer> </script>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+</head>
+</head>
+<body>
+    <div class="all">
+        <header>Forecast Méteo</header>
+
+        <div class="infos-map-container">
+            <div class="infos-container">
+                <div class="infos">
+                    <p id='pville'>Ville : <span id='ville'>Castelo De Paiva</span></p>
+                    <p id='pregion'>Region :  <span>Aveiro</span></p>
+                    <p id='ppays'>Pays :   <span>Portugal</span></p>
+                    <p id='jours'>Voir les prévisions pour <input type="number" id="nbjours-selector" min="1" max="7" name='nbjours-selector' value='6'/> jours</p>
+                </div>
+
+            </div>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+        
+        <div class="container2">
+            <div class="onglet-selector-container">
+                <div class="onglet-selector" id="weatherapi-selector"> WeatherApi</div>
+                <div class="onglet-selector" id="openmeteo-selector"> OpenMeteo</div>
+                <div class="onglet-selector" id="openweather-selector"> OpenWeather</div>
+            </div>
+            <div class="onglet-container">
+                <div class='onglet' id='weatherapi'><div class='infobox fade-div'><div class='date data'>Aujourd'hui</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>16.0°C</span></div><div class='TMin data'>  Min T°: <span>10.3°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-28deg);'><div class='arrow'></div></div><span class='wind-speed'>13.3 km/h</span></div></div><div class='condition data'>Condition: <span><br>Heavy rain</span></div></div><div class='infobox fade-div'><div class='date data'>Demain</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>12.9°C</span></div><div class='TMin data'>  Min T°: <span>8.6°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-32deg);'><div class='arrow'></div></div><span class='wind-speed'>7.9 km/h</span></div></div><div class='condition data'>Condition: <span><br>Heavy rain</span></div></div><div class='infobox fade-div'><div class='date data'>Date: 2025-11-15</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>13.5°C</span></div><div class='TMin data'>  Min T°: <span>7.5°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-12deg);'><div class='arrow'></div></div><span class='wind-speed'>7.2 km/h</span></div></div><div class='condition data'>Condition: <span><br>Moderate rain</span></div></div><div class='infobox fade-div'><div class='date data'>Date:  X </div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>0.0°C</span></div><div class='TMin data'>  Min T°: <span>0.0°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-180deg);'><div class='arrow'></div></div><span class='wind-speed'>0.0 km/h</span></div></div><div class='condition data'>Condition: <span><br>Weather Api ne<br>fournit que 3 jours</span></div></div><div class='infobox fade-div'><div class='date data'>Date:  X </div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>0.0°C</span></div><div class='TMin data'>  Min T°: <span>0.0°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-180deg);'><div class='arrow'></div></div><span class='wind-speed'>0.0 km/h</span></div></div><div class='condition data'>Condition: <span><br>Weather Api ne<br>fournit que 3 jours</span></div></div><div class='infobox fade-div'><div class='date data'>Date:  X </div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>0.0°C</span></div><div class='TMin data'>  Min T°: <span>0.0°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-180deg);'><div class='arrow'></div></div><span class='wind-speed'>0.0 km/h</span></div></div><div class='condition data'>Condition: <span><br>Weather Api ne<br>fournit que 3 jours</span></div></div>
+                    
+                </div>
+                <div class='onglet' id='openmeteo'><div class='infobox fade-div'><div class='date data'>Aujourd'hui</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>16.3°C</span></div><div class='TMin data'>  Min T°: <span>14.0°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-23deg);'><div class='arrow'></div></div><span class='wind-speed'>14.1 km/h</span></div></div><div class='condition data'>Condition: <span><br>Rain</span></div></div><div class='infobox fade-div'><div class='date data'>Demain</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>14.3°C</span></div><div class='TMin data'>  Min T°: <span>12.4°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(12deg);'><div class='arrow'></div></div><span class='wind-speed'>16.8 km/h</span></div></div><div class='condition data'>Condition: <span><br>Overcast</span></div></div><div class='infobox fade-div'><div class='date data'>Date: 2025-11-15</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>14.9°C</span></div><div class='TMin data'>  Min T°: <span>12.0°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(19deg);'><div class='arrow'></div></div><span class='wind-speed'>14.7 km/h</span></div></div><div class='condition data'>Condition: <span><br>Rain</span></div></div><div class='infobox fade-div'><div class='date data'>Date: 2025-11-16</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>13.6°C</span></div><div class='TMin data'>  Min T°: <span>10.2°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(17deg);'><div class='arrow'></div></div><span class='wind-speed'>10.6 km/h</span></div></div><div class='condition data'>Condition: <span><br>Rain</span></div></div><div class='infobox fade-div'><div class='date data'>Date: 2025-11-17</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>15.4°C</span></div><div class='TMin data'>  Min T°: <span>7.3°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-110deg);'><div class='arrow'></div></div><span class='wind-speed'>7.3 km/h</span></div></div><div class='condition data'>Condition: <span><br>Overcast</span></div></div><div class='infobox fade-div'><div class='date data'>Date: 2025-11-18</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>15.9°C</span></div><div class='TMin data'>  Min T°: <span>6.4°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-76deg);'><div class='arrow'></div></div><span class='wind-speed'>5.8 km/h</span></div></div><div class='condition data'>Condition: <span><br>Sunny</span></div></div>
+                    
+                </div>
+                <div class='onglet' id='openweather'><div class='infobox fade-div'><div class='date data'>Aujourd'hui</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>15.25°C</span></div><div class='TMin data'>  Min T°: <span>14.33°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-13deg);'><div class='arrow'></div></div><span class='wind-speed'>14.2 km/h</span></div></div><div class='condition data'>Condition: <span><br>Moderate rain</span></div></div><div class='infobox fade-div'><div class='date data'>Demain</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>12.47°C</span></div><div class='TMin data'>  Min T°: <span>12.47°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-2deg);'><div class='arrow'></div></div><span class='wind-speed'>9.8 km/h</span></div></div><div class='condition data'>Condition: <span><br>Heavy rain</span></div></div><div class='infobox fade-div'><div class='date data'>Date: 2025-11-15</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>13.52°C</span></div><div class='TMin data'>  Min T°: <span>13.52°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-5deg);'><div class='arrow'></div></div><span class='wind-speed'>9.9 km/h</span></div></div><div class='condition data'>Condition: <span><br>Patchy rain nearby</span></div></div><div class='infobox fade-div'><div class='date data'>Date: 2025-11-16</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>12.7°C</span></div><div class='TMin data'>  Min T°: <span>12.7°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-23deg);'><div class='arrow'></div></div><span class='wind-speed'>8.5 km/h</span></div></div><div class='condition data'>Condition: <span><br>Patchy rain nearby</span></div></div><div class='infobox fade-div'><div class='date data'>Date: 2025-11-17</div><div class ='tempventcontainer'><div class='tempcontainer'><div class='TMax data'>  Max T°: <span>16.62°C</span></div><div class='TMin data'>  Min T°: <span>16.62°C</span></div></div><div class='ventcontainer'><div class='wind-direction' style='transform: rotate(-119deg);'><div class='arrow'></div></div><span class='wind-speed'>8.2 km/h</span></div></div><div class='condition data'>Condition: <span><br>Sunny</span></div></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

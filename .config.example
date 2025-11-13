@@ -1,0 +1,3 @@
+# Copiez ce fichier en ".config" à la racine du projet et remplissez les clés
+API_KEY_WeatherAPI=your_weatherapi_key_here
+API_KEY_OPENWEATHER=your_openweather_key_here
