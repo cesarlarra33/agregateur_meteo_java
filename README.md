@@ -1,4 +1,5 @@
-# Agrégateur Météo (Java + Gradle)
+# Agrégateur Météo en Java 
+![Aperçu de l'interface](image.png)
 
 Application en ligne de commande (Java) qui interroge 3 fournisseurs météo (WeatherAPI, Open‑Meteo, OpenWeather) et affiche:
 - les prévisions dans le terminal,
